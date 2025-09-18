@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mission UI - Navigation</title>
+    <style>
+        :root {
+            --bg: #0f1115;
+            --panel: #131722;
+            --muted: #8b94a7;
+            --text: #e6e9ef;
+            --accent: #5b8cff;
+            --border: #202636;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+        }
+
+        .app {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            height: 100%;
+        }
+
+        aside {
+            background: var(--panel);
+            border-right: 1px solid var(--border);
+            padding: 20px 14px;
+            overflow: auto;
+        }
+
+        .brand {
+            font-weight: 700;
+            letter-spacing: .2px;
+            margin: 2px 8px 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand .dot {
+            width: 10px;
+            height: 10px;
+            background: var(--accent);
+            border-radius: 999px;
+            box-shadow: 0 0 22px var(--accent);
+        }
+
+        .search {
+            margin: 8px;
+        }
+
+        .search input {
+            width: 100%;
+            padding: 10px 12px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            background: #0c0f16;
+            color: var(--text);
+            outline: none;
+        }
+
+        nav {
+            margin-top: 10px;
+            display: grid;
+            gap: 6px;
+        }
+
+        .link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 12px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: var(--text);
+            border: 1px solid transparent;
+        }
+
+        .link:hover {
+            background: #0f1420;
+            border-color: var(--border);
+        }
+
+        .link.active {
+            background: rgba(91, 140, 255, .12);
+            border-color: rgba(91, 140, 255, .35);
+        }
+
+        .link small {
+            color: var(--muted);
+        }
+
+        main {
+            position: relative;
+        }
+
+        iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            background: #fff;
+        }
+
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 5;
+            background: var(--bg);
+            border-bottom: 1px solid var(--border);
+            padding: 10px 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .crumb {
+            color: var(--muted);
+            font-size: 13px
+        }
+
+        .actions {
+            margin-left: auto;
+            display: flex;
+            gap: 8px
+        }
+
+        .btn {
+            font-size: 13px;
+            padding: 8px 10px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            background: #0c0f16;
+            color: var(--text);
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            border-color: var(--accent);
+        }
+
+        @media (max-width: 900px) {
+            .app {
+                grid-template-columns: 1fr;
+            }
+
+            aside {
+                position: fixed;
+                inset: 0 auto 0 0;
+                width: 84%;
+                max-width: 320px;
+                transform: translateX(-100%);
+                transition: transform .25s ease;
+                z-index: 20;
+            }
+
+            aside.open {
+                transform: translateX(0)
+            }
+
+            .scrim {
+                position: fixed;
+                inset: 0;
+                background: rgba(0, 0, 0, .4);
+                display: none;
+                z-index: 10
+            }
+
+            .scrim.show {
+                display: block
+            }
+
+            .btn.menu {
+                display: inline-flex
+            }
+        }
+
+        @media (min-width: 901px) {
+            .btn.menu {
+                display: none
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <aside id="sidebar">
+            <div class="brand"><span class="dot"></span> Game / Missions</div>
+            <div class="search"><input id="filter" placeholder="Filtrer les écrans…" /></div>
+            <nav id="nav">
+                <a class="link" data-path="active_data_puzzle_interface/code.html"
+                    href="#/active_data_puzzle_interface">🧠 <span>Active Data Puzzle Interface</span></a>
+                <a class="link" data-path="agent_leaderboard/code.html" href="#/agent_leaderboard">🏆 <span>Agent
+                        Leaderboard</span></a>
+                <a class="link" data-path="crossword_data_puzzle_story/code.html"
+                    href="#/crossword_data_puzzle_story">🧩 <span>Crossword Data Puzzle Story</span></a>
+                <a class="link" data-path="data_decryption_interface/code.html" href="#/data_decryption_interface">🔐
+                    <span>Data Decryption Interface</span></a>
+                <a class="link" data-path="data_set_comparator/code.html" href="#/data_set_comparator">📊 <span>Data Set
+                        Comparator</span></a>
+                <a class="link" data-path="dynamic_inventory_dashboard/code.html"
+                    href="#/dynamic_inventory_dashboard">📦 <span>Dynamic Inventory Dashboard</span></a>
+                <a class="link" data-path="futuristic_mission_dashboard/code.html"
+                    href="#/futuristic_mission_dashboard">🛰️ <span>Futuristic Mission Dashboard</span></a>
+                <a class="link" data-path="mission_briefing_with_voiceover/code.html"
+                    href="#/mission_briefing_with_voiceover">🎙️ <span>Mission Briefing (Voiceover)</span></a>
+                <a class="link" data-path="mission_outcome_display/code.html" href="#/mission_outcome_display">✅
+                    <span>Mission Outcome Display</span></a>
+                <a class="link" data-path="simulated_ocr_module/code.html" href="#/simulated_ocr_module">📝
+                    <span>Simulated OCR Module</span></a>
+            </nav>
+
+            <div style="margin:14px 8px; color:var(--muted); font-size:12px">
+                Vous trouverez ici une liste d'exemple d'écrans de l'application</code>.
+            </div>
+        </aside>
+
+        <main>
+            <div class="topbar">
+                <button class="btn menu" id="menuBtn">☰</button>
+                <div class="crumb" id="crumb">Sélectionne un écran</div>
+
+            </div>
+            <iframe id="viewer" src="about:blank" title="viewer"></iframe>
+        </main>
+    </div>
+    <div class="scrim" id="scrim"></div>
+
+    <script>
+        const nav = document.getElementById('nav');
+        const viewer = document.getElementById('viewer');
+        const crumb = document.getElementById('crumb');
+        const openBtn = document.getElementById('openNewTab');
+        const reloadBtn = document.getElementById('reload');
+        const sidebar = document.getElementById('sidebar');
+        const scrim = document.getElementById('scrim');
+        const menuBtn = document.getElementById('menuBtn');
+        const filter = document.getElementById('filter');
+
+        // Mobile sidebar toggle
+        const toggleSidebar = (state) => {
+            const open = state ?? !sidebar.classList.contains('open');
+            sidebar.classList.toggle('open', open);
+            scrim.classList.toggle('show', open);
+        };
+        menuBtn.onclick = () => toggleSidebar();
+        scrim.onclick = () => toggleSidebar(false);
+
+        // Filter links
+        filter.addEventListener('input', e => {
+            const q = e.target.value.toLowerCase();
+            for (const a of nav.querySelectorAll('.link')) {
+                const txt = a.textContent.toLowerCase();
+                a.style.display = txt.includes(q) ? '' : 'none';
+            }
+        });
+
+        // Activate link based on hash
+        function setActiveByHash() {
+            const hash = decodeURIComponent(location.hash.replace(/^#\//, ''));
+            let target = null;
+            for (const a of nav.querySelectorAll('.link')) {
+                const id = a.getAttribute('href').replace(/^#\//, '');
+                a.classList.toggle('active', id === hash);
+                if (id === hash) target = a;
+            }
+            if (target) {
+                const path = target.dataset.path;
+                viewer.src = path;               // charge le code.html dans l'iframe
+                crumb.textContent = target.innerText.trim();
+                openBtn.onclick = () => window.open(path, '_blank');
+                reloadBtn.onclick = () => viewer.contentWindow?.location.reload();
+                toggleSidebar(false);
+            }
+        }
+
+        // Click nav -> hash routing
+        nav.addEventListener('click', (e) => {
+            const a = e.target.closest('a.link'); if (!a) return;
+            // la navigation se fait via le hash (permet partage/refresh sans perdre la page)
+        });
+
+        window.addEventListener('hashchange', setActiveByHash);
+
+        // Définir une page par défaut si pas de hash :
+        if (!location.hash) {
+            viewer.src = "welcome.html";
+            crumb.textContent = "Bienvenue";
+        } else {
+            setActiveByHash();
+        }
+
+    </script>
+</body>
+
+</html>

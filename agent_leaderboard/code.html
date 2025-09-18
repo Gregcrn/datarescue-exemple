@@ -1,0 +1,135 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+        :root {
+            --primary-color: #00BFFF;
+        }
+        .glowing-border {
+            box-shadow: 0 0 2px 0px var(--primary-color), 0 0 5px 0px var(--primary-color), 0 0 10px 0px var(--primary-color);
+        }
+        .glowing-text {
+            text-shadow: 0 0 2px var(--primary-color), 0 0 5px var(--primary-color), 0 0 10px var(--primary-color);
+        }
+    </style>
+</head>
+<body class="bg-black">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-black dark group/design-root overflow-x-hidden" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#1a1a1a] px-10 py-3">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-[var(--primary-color)]">
+<svg class="w-full h-full glowing-text" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.59L7.71 13.3a.996.996 0 111.41-1.41L11 13.17V7h2v6.17l1.88-1.88a.996.996 0 111.41 1.41L13 16.59V17h-2v-.41z"></path>
+</svg>
+</div>
+<h1 class="text-white text-xl font-bold leading-tight tracking-wider glowing-text">OPERATION DATA RESCUE</h1>
+</div>
+<div class="flex flex-1 justify-end gap-6">
+<nav class="flex items-center gap-6">
+<a class="text-gray-400 hover:text-white text-sm font-medium leading-normal transition-colors tracking-widest" href="#">MISSIONS</a>
+<a class="text-gray-400 hover:text-white text-sm font-medium leading-normal transition-colors tracking-widest" href="#">TRAINING</a>
+<a class="text-[var(--primary-color)] glowing-text text-sm font-bold leading-normal border-b-2 border-[var(--primary-color)] pb-1 tracking-widest" href="#">LEADERBOARD</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center rounded-full size-10 bg-[#161b22] text-gray-400 hover:text-[var(--primary-color)] hover:bg-[#21262d] transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-[var(--primary-color)] glowing-border" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC_bikqfpWCzNnnr4nlHk-sKhAhSWjY8WYQnCXWAxgSQ34owOTWmQBPOhTT3hU4ALO1BbQX_6QV6iZmNzqUCTQpRaOBWILEajNAC5oJEJPJZ2C1jtTEg_OgBsw6hn5feBL-e7bmMaLFRib2veOIChYj6nemWFacWxqBI-3feSeX8Cr9dVzLhLd3FLk2W-FxsY5DoKIXpvW0ackJd4owCARUd9Y-lXCzugKdqBqIR4V1NJMAXEsmbbyU6zJWyzcuAp2BmuLoVaDPjw");'></div>
+</div>
+</div>
+</header>
+<main class="px-10 md:px-20 lg:px-40 flex flex-1 justify-center py-10">
+<div class="layout-content-container flex flex-col max-w-5xl flex-1">
+<div class="flex flex-wrap justify-between items-center gap-4 p-4 mb-6">
+<div class="flex flex-col gap-2">
+<h2 class="text-white tracking-[0.3em] text-4xl font-bold leading-tight glowing-text">LEADERBOARD</h2>
+<p class="text-gray-500 text-sm font-normal leading-normal tracking-wider">TOP TEAMS // MISSION: GLOBAL SPIES</p>
+</div>
+</div>
+<div class="bg-black/50 border border-t-2 border-[var(--primary-color)] rounded-t-lg glowing-border overflow-hidden">
+<table class="w-full text-left">
+<thead class="bg-transparent">
+<tr>
+<th class="px-6 py-4 text-left text-gray-400 text-xs font-bold uppercase tracking-widest">Rank</th>
+<th class="px-6 py-4 text-left text-gray-400 text-xs font-bold uppercase tracking-widest">Team</th>
+<th class="px-6 py-4 text-left text-gray-400 text-xs font-bold uppercase tracking-widest">Score</th>
+<th class="px-6 py-4 text-left text-gray-400 text-xs font-bold uppercase tracking-widest">Time</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#1a1a1a]">
+<tr class="hover:bg-gray-900/50 transition-colors">
+<td class="px-6 py-4 whitespace-nowrap text-lg font-bold text-[var(--primary-color)] glowing-text">1</td>
+<td class="px-6 py-4 whitespace-nowrap text-white font-semibold">The Data Decoders</td>
+<td class="px-6 py-4 whitespace-nowrap text-gray-300 font-mono">12,500</td>
+<td class="px-6 py-4 whitespace-nowrap text-gray-300 font-mono">00:25:12</td>
+</tr>
+<tr class="hover:bg-gray-900/50 transition-colors">
+<td class="px-6 py-4 whitespace-nowrap text-lg font-bold text-gray-300">2</td>
+<td class="px-6 py-4 whitespace-nowrap text-white font-semibold">Cyber Sentinels</td>
+<td class="px-6 py-4 whitespace-nowrap text-gray-300 font-mono">11,800</td>
+<td class="px-6 py-4 whitespace-nowrap text-gray-300 font-mono">00:28:45</td>
+</tr>
+<tr class="hover:bg-gray-900/50 transition-colors">
+<td class="px-6 py-4 whitespace-nowrap text-lg font-bold text-gray-300">3</td>
+<td class="px-6 py-4 whitespace-nowrap text-white font-semibold">The Ghost Protocol</td>
+<td class="px-6 py-4 whitespace-nowrap text-gray-300 font-mono">11,200</td>
+<td class="px-6 py-4 whitespace-nowrap text-gray-300 font-mono">00:30:01</td>
+</tr>
+<tr class="hover:bg-gray-900/50 transition-colors">
+<td class="px-6 py-4 whitespace-nowrap text-lg font-bold text-gray-300">4</td>
+<td class="px-6 py-4 whitespace-nowrap text-white font-semibold">Digital Phantoms</td>
+<td class="px-6 py-4 whitespace-nowrap text-gray-300 font-mono">10,900</td>
+<td class="px-6 py-4 whitespace-nowrap text-gray-300 font-mono">00:32:15</td>
+</tr>
+<tr class="hover:bg-gray-900/50 transition-colors">
+<td class="px-6 py-4 whitespace-nowrap text-lg font-bold text-gray-300">5</td>
+<td class="px-6 py-4 whitespace-nowrap text-white font-semibold">Shadow Brokers</td>
+<td class="px-6 py-4 whitespace-nowrap text-gray-300 font-mono">10,500</td>
+<td class="px-6 py-4 whitespace-nowrap text-gray-300 font-mono">00:33:50</td>
+</tr>
+<tr class="hover:bg-gray-900/50 transition-colors">
+<td class="px-6 py-4 whitespace-nowrap text-lg font-bold text-gray-300">6</td>
+<td class="px-6 py-4 whitespace-nowrap text-white font-semibold">Net Runners</td>
+<td class="px-6 py-4 whitespace-nowrap text-gray-300 font-mono">10,200</td>
+<td class="px-6 py-4 whitespace-nowrap text-gray-300 font-mono">00:35:22</td>
+</tr>
+<tr class="hover:bg-gray-900/50 transition-colors">
+<td class="px-6 py-4 whitespace-nowrap text-lg font-bold text-gray-300">7</td>
+<td class="px-6 py-4 whitespace-nowrap text-white font-semibold">Code Breakers</td>
+<td class="px-6 py-4 whitespace-nowrap text-gray-300 font-mono">9,800</td>
+<td class="px-6 py-4 whitespace-nowrap text-gray-300 font-mono">00:37:05</td>
+</tr>
+<tr class="hover:bg-gray-900/50 transition-colors">
+<td class="px-6 py-4 whitespace-nowrap text-lg font-bold text-gray-300">8</td>
+<td class="px-6 py-4 whitespace-nowrap text-white font-semibold">The Infiltrators</td>
+<td class="px-6 py-4 whitespace-nowrap text-gray-300 font-mono">9,500</td>
+<td class="px-6 py-4 whitespace-nowrap text-gray-300 font-mono">00:38:40</td>
+</tr>
+<tr class="hover:bg-gray-900/50 transition-colors">
+<td class="px-6 py-4 whitespace-nowrap text-lg font-bold text-gray-300">9</td>
+<td class="px-6 py-4 whitespace-nowrap text-white font-semibold">Stealth Squad</td>
+<td class="px-6 py-4 whitespace-nowrap text-gray-300 font-mono">9,200</td>
+<td class="px-6 py-4 whitespace-nowrap text-gray-300 font-mono">00:40:18</td>
+</tr>
+<tr class="hover:bg-gray-900/50 transition-colors">
+<td class="px-6 py-4 whitespace-nowrap text-lg font-bold text-gray-300">10</td>
+<td class="px-6 py-4 whitespace-nowrap text-white font-semibold">Data Ghosts</td>
+<td class="px-6 py-4 whitespace-nowrap text-gray-300 font-mono">8,900</td>
+<td class="px-6 py-4 whitespace-nowrap text-gray-300 font-mono">00:42:03</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

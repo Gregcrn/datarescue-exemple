@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>Operation Data Rescue - OCR Module</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #0da6f2;
+      }
+      .ocr-highlight {
+        background-color: rgba(242, 215, 0, 0.2);
+        border-bottom: 2px solid #f2d700;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .ocr-highlight:hover {
+        background-color: rgba(242, 215, 0, 0.4);
+      }
+    </style>
+</head>
+<body class="bg-[#111618]" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+<div class="relative flex h-auto min-h-screen w-full flex-col text-white dark group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#283339] px-6 py-4 md:px-10">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[var(--primary-color)] text-3xl">shield</span>
+<h1 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">Operation Data Rescue</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-[#283339] hover:bg-[#3b4c54] transition-colors">
+<span class="material-symbols-outlined text-white text-2xl">settings</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-[#283339]" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAmKGHTpZnE30HxG2K1XnZOFjEeODEKO_QOMWndSu8IcJkxbynPdf2z-8oaVTOklNtXVv5REqYsWC1CCJX4tXeV8_DC7scfIVNqZhGG-rmgEjzhLzVBV0o_2usZEjhzt_XNPrHvQxttcX5Xy1kWp-ff6yW8xITJzp5GXakJ6FtQ47d4z7GyDax8qr9A8TSh8ppqi98nwzpi3xUdbq3pcMw9l0aUy39lcxdj-4wunmTcYU_ZhskMssOHso7O4eBu65_zfiIH16_PUA");'></div>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center justify-center p-4 sm:p-6 md:p-10">
+<div class="w-full max-w-4xl mx-auto">
+<div class="text-center mb-8">
+<h2 class="text-3xl sm:text-4xl font-bold tracking-tighter">OCR Module: Active</h2>
+<p class="text-gray-400 mt-2 text-lg">Analyze the document and correct transcription errors.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+<div class="bg-[#1a2024] p-6 rounded-lg border border-[#283339] relative">
+<div class="absolute top-2 left-2 text-xs uppercase font-bold text-gray-500 tracking-wider">
+                  Source Document
+                </div>
+<div class="absolute top-2 right-2 flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-red-500 animate-pulse"></div>
+<span class="text-xs font-mono text-red-500">SCANNING...</span>
+</div>
+<img alt="A fake paper document with text on it." class="rounded-md object-cover w-full h-auto mt-8 opacity-75" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaKb1KvS5SWBsCun-Dc33k48gZMayfnTTWZzdDKfIE8FHLYt0Zh44SVDRGdnwkUEMHdSaWAQFsUrTY0mPQnbjE7o5hV0UDxSuXgRaxeEH_kYqfq5L71HVsCJM2asOTaW32U_4mbTsoRGMJFu9Oz_Uwo5NA0gfULauDr7DMTErcamqXfXUGWQyCf0FfORWQ5PDPZcdVYTUA2uo6JMrdgkKTq3czYDRpGM-v2VpmEn9WT4zkd6uUwnPE-FpM0JLC-qCGDfMGzqOQ2g"/>
+</div>
+<div class="bg-[#1a2024] p-6 rounded-lg border border-[#283339] flex flex-col h-full">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-lg font-bold text-gray-300">Transcribed Text</h3>
+<div class="flex items-center gap-2 text-xs font-mono text-[var(--primary-color)]">
+<span class="material-symbols-outlined text-base">verified</span>
+<span>Ready for review</span>
+</div>
+</div>
+<div class="flex-1 p-4 bg-[#111618] rounded-md font-mono text-gray-300 text-sm leading-relaxed overflow-auto" style="min-height: 250px">
+<p>
+<strong>TOP SECRET // EYES ONLY</strong><br/>
+<strong>AGENT:</strong> 74<br/>
+<strong>MISSION:</strong> Operation Data Rescue<br/><br/>
+                    The primary objective is to infiltrate the secure server and retrieve the stolen data. The data pertains to agent
+                    identities and must be secured at all costs. Access requires solving a series of cryptographic puzzles. Be aware of
+                    <span class="ocr-highlight" title="Error: Should be 'anomalies'">anomalyes</span> in the system. The data must be Findable, Accessible,
+                    <span class="ocr-highlight" title="Error: Should be 'Interoperable'">Interoperable</span>, and Reusable (FAIR principles). All actions are logged and subject
+                    to GDPR regulations. Proceed with <span class="ocr-highlight" title="Error: Should be 'extreme'">extrene</span> caution. This mission is of the highest
+                    <span class="ocr-highlight" title="Error: Should be 'priority'">prioriy</span>. Failure is not an option.
+                  </p>
+</div>
+<div class="mt-6 text-center">
+<button class="flex w-full sm:w-auto items-center justify-center gap-2 rounded-md h-12 px-8 bg-[var(--primary-color)] text-white text-base font-bold leading-normal tracking-wide hover:bg-[#0b8bcc] transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#111618] focus:ring-[var(--primary-color)]">
+<span class="material-symbols-outlined">task_alt</span>
+<span class="truncate">Submit Final Version</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>
