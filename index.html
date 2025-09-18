@@ -122,7 +122,7 @@
             z-index: 5;
             background: var(--bg);
             border-bottom: 1px solid var(--border);
-            padding: 10px 14px;
+            padding: 1px 1px;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -147,6 +147,7 @@
             background: #0c0f16;
             color: var(--text);
             cursor: pointer;
+            margin-bottom: 50px;
         }
 
         .btn:hover {
@@ -238,8 +239,8 @@
 
         <main>
             <div class="topbar">
-                <button class="btn menu" id="menuBtn">☰</button>
-                <div class="crumb" id="crumb">Sélectionne un écran</div>
+                <button class="menu btn " id="menuBtn">☰</button>
+                <!-- <div class="crumb" id="crumb">Sélectionne un écran</div> -->
 
             </div>
             <iframe id="viewer" src="about:blank" title="viewer"></iframe>
