@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
-<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-<title>Operation Data Rescue - OCR Module</title>
-<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<style type="text/tailwindcss">
-      :root {
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+  <link as="style"
+    href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700"
+    onload="this.rel='stylesheet'" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <title>Operation Data Rescue - OCR Module</title>
+  <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <style type="text/tailwindcss">
+    :root {
         --primary-color: #0da6f2;
       }
       .ocr-highlight {
@@ -22,70 +26,94 @@
       }
     </style>
 </head>
-<body class="bg-[#111618]" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
-<div class="relative flex h-auto min-h-screen w-full flex-col text-white dark group/design-root overflow-x-hidden">
-<div class="layout-container flex h-full grow flex-col">
-<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#283339] px-6 py-4 md:px-10">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-[var(--primary-color)] text-3xl">shield</span>
-<h1 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">Operation Data Rescue</h1>
-</div>
-<div class="flex items-center gap-4">
-<button class="flex items-center justify-center rounded-full h-10 w-10 bg-[#283339] hover:bg-[#3b4c54] transition-colors">
-<span class="material-symbols-outlined text-white text-2xl">settings</span>
-</button>
-<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-[#283339]" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAmKGHTpZnE30HxG2K1XnZOFjEeODEKO_QOMWndSu8IcJkxbynPdf2z-8oaVTOklNtXVv5REqYsWC1CCJX4tXeV8_DC7scfIVNqZhGG-rmgEjzhLzVBV0o_2usZEjhzt_XNPrHvQxttcX5Xy1kWp-ff6yW8xITJzp5GXakJ6FtQ47d4z7GyDax8qr9A8TSh8ppqi98nwzpi3xUdbq3pcMw9l0aUy39lcxdj-4wunmTcYU_ZhskMssOHso7O4eBu65_zfiIH16_PUA");'></div>
-</div>
-</header>
-<main class="flex-1 flex flex-col items-center justify-center p-4 sm:p-6 md:p-10">
-<div class="w-full max-w-4xl mx-auto">
-<div class="text-center mb-8">
-<h2 class="text-3xl sm:text-4xl font-bold tracking-tighter">OCR Module: Active</h2>
-<p class="text-gray-400 mt-2 text-lg">Analyze the document and correct transcription errors.</p>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-<div class="bg-[#1a2024] p-6 rounded-lg border border-[#283339] relative">
-<div class="absolute top-2 left-2 text-xs uppercase font-bold text-gray-500 tracking-wider">
-                  Source Document
-                </div>
-<div class="absolute top-2 right-2 flex items-center gap-2">
-<div class="w-3 h-3 rounded-full bg-red-500 animate-pulse"></div>
-<span class="text-xs font-mono text-red-500">SCANNING...</span>
-</div>
-<img alt="A fake paper document with text on it." class="rounded-md object-cover w-full h-auto mt-8 opacity-75" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaKb1KvS5SWBsCun-Dc33k48gZMayfnTTWZzdDKfIE8FHLYt0Zh44SVDRGdnwkUEMHdSaWAQFsUrTY0mPQnbjE7o5hV0UDxSuXgRaxeEH_kYqfq5L71HVsCJM2asOTaW32U_4mbTsoRGMJFu9Oz_Uwo5NA0gfULauDr7DMTErcamqXfXUGWQyCf0FfORWQ5PDPZcdVYTUA2uo6JMrdgkKTq3czYDRpGM-v2VpmEn9WT4zkd6uUwnPE-FpM0JLC-qCGDfMGzqOQ2g"/>
-</div>
-<div class="bg-[#1a2024] p-6 rounded-lg border border-[#283339] flex flex-col h-full">
-<div class="flex justify-between items-center mb-4">
-<h3 class="text-lg font-bold text-gray-300">Transcribed Text</h3>
-<div class="flex items-center gap-2 text-xs font-mono text-[var(--primary-color)]">
-<span class="material-symbols-outlined text-base">verified</span>
-<span>Ready for review</span>
-</div>
-</div>
-<div class="flex-1 p-4 bg-[#111618] rounded-md font-mono text-gray-300 text-sm leading-relaxed overflow-auto" style="min-height: 250px">
-<p>
-<strong>TOP SECRET // EYES ONLY</strong><br/>
-<strong>AGENT:</strong> 74<br/>
-<strong>MISSION:</strong> Operation Data Rescue<br/><br/>
-                    The primary objective is to infiltrate the secure server and retrieve the stolen data. The data pertains to agent
-                    identities and must be secured at all costs. Access requires solving a series of cryptographic puzzles. Be aware of
-                    <span class="ocr-highlight" title="Error: Should be 'anomalies'">anomalyes</span> in the system. The data must be Findable, Accessible,
-                    <span class="ocr-highlight" title="Error: Should be 'Interoperable'">Interoperable</span>, and Reusable (FAIR principles). All actions are logged and subject
-                    to GDPR regulations. Proceed with <span class="ocr-highlight" title="Error: Should be 'extreme'">extrene</span> caution. This mission is of the highest
-                    <span class="ocr-highlight" title="Error: Should be 'priority'">prioriy</span>. Failure is not an option.
-                  </p>
-</div>
-<div class="mt-6 text-center">
-<button class="flex w-full sm:w-auto items-center justify-center gap-2 rounded-md h-12 px-8 bg-[var(--primary-color)] text-white text-base font-bold leading-normal tracking-wide hover:bg-[#0b8bcc] transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#111618] focus:ring-[var(--primary-color)]">
-<span class="material-symbols-outlined">task_alt</span>
-<span class="truncate">Submit Final Version</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-</main>
-</div>
-</div>
 
-</body></html>
+<body class="bg-[#111618]" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+  <div class="relative flex h-auto min-h-screen w-full flex-col text-white dark group/design-root overflow-x-hidden">
+    <div class="layout-container flex h-full grow flex-col">
+      <header
+        class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#283339] px-10 py-4">
+        <div class="flex items-center gap-4 text-white">
+          <svg class="size-8 text-[var(--primary-color)]" fill="none" viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg">
+            <path clip-rule="evenodd"
+              d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z"
+              fill="currentColor" fill-rule="evenodd"></path>
+          </svg>
+          <h1 class="text-white text-xl font-bold leading-tight tracking-[-0.015em] uppercase">Operation: Data
+            Rescue
+          </h1>
+        </div>
+        <div class="flex flex-1 justify-end gap-6 items-center">
+          <button class="text-gray-400 hover:text-white transition-colors">
+            <span class="material-symbols-outlined"> settings </span>
+          </button>
+          <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-[#283339]"
+            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuArj5BaLo34bSEir9h4yj_EOiU9VvilJsn8DgwzMUJI7PWcOyTZDXXMYhrM2rkPEgAi_UpjPbQhpaal7wtCCL1_DhXJKY-o5iR8PI2eXyfjSPyUBSXBlq6V8s9yFlEhp4SH-sIzI3968ZHILkRkYhxvkBKO9Of2pq_QbAf4dcJdp-JTMoj1H1g2gYeVPR4Ei2Zk3vNPrv-SL2w8SPQ-vxtRFm0wjXSO2bHHk-FoH5czGDYRz68W-ELMRtZcKf7NnqbbOMG7Rwrk5Q");'>
+          </div>
+        </div>
+      </header>
+      <main class="flex-1 flex flex-col items-center justify-center p-4 sm:p-6 md:p-10">
+        <div class="w-full max-w-4xl mx-auto">
+          <div class="text-center mb-8">
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tighter">OCR Module: Active</h2>
+            <p class="text-gray-400 mt-2 text-lg">Analyze the document and correct transcription errors.</p>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            <div class="bg-[#1a2024] p-6 rounded-lg border border-[#283339] relative">
+              <div class="absolute top-2 left-2 text-xs uppercase font-bold text-gray-500 tracking-wider">
+                Source Document
+              </div>
+              <div class="absolute top-2 right-2 flex items-center gap-2">
+                <div class="w-3 h-3 rounded-full bg-red-500 animate-pulse"></div>
+                <span class="text-xs font-mono text-red-500">SCANNING...</span>
+              </div>
+              <img alt="A fake paper document with text on it."
+                class="rounded-md object-cover w-full h-auto mt-8 opacity-75"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaKb1KvS5SWBsCun-Dc33k48gZMayfnTTWZzdDKfIE8FHLYt0Zh44SVDRGdnwkUEMHdSaWAQFsUrTY0mPQnbjE7o5hV0UDxSuXgRaxeEH_kYqfq5L71HVsCJM2asOTaW32U_4mbTsoRGMJFu9Oz_Uwo5NA0gfULauDr7DMTErcamqXfXUGWQyCf0FfORWQ5PDPZcdVYTUA2uo6JMrdgkKTq3czYDRpGM-v2VpmEn9WT4zkd6uUwnPE-FpM0JLC-qCGDfMGzqOQ2g" />
+            </div>
+            <div class="bg-[#1a2024] p-6 rounded-lg border border-[#283339] flex flex-col h-full">
+              <div class="flex justify-between items-center mb-4">
+                <h3 class="text-lg font-bold text-gray-300">Transcribed Text</h3>
+                <div class="flex items-center gap-2 text-xs font-mono text-[var(--primary-color)]">
+                  <span class="material-symbols-outlined text-base">verified</span>
+                  <span>Ready for review</span>
+                </div>
+              </div>
+              <div
+                class="flex-1 p-4 bg-[#111618] rounded-md font-mono text-gray-300 text-sm leading-relaxed overflow-auto"
+                style="min-height: 250px">
+                <p>
+                  <strong>TOP SECRET // EYES ONLY</strong><br />
+                  <strong>AGENT:</strong> 74<br />
+                  <strong>MISSION:</strong> Operation Data Rescue<br /><br />
+                  The primary objective is to infiltrate the secure server and retrieve the stolen data. The data
+                  pertains to agent
+                  identities and must be secured at all costs. Access requires solving a series of cryptographic
+                  puzzles. Be aware of
+                  <span class="ocr-highlight" title="Error: Should be 'anomalies'">anomalyes</span> in the system. The
+                  data must be Findable, Accessible,
+                  <span class="ocr-highlight" title="Error: Should be 'Interoperable'">Interoperable</span>, and
+                  Reusable (FAIR principles). All actions are logged and subject
+                  to GDPR regulations. Proceed with <span class="ocr-highlight"
+                    title="Error: Should be 'extreme'">extrene</span> caution. This mission is of the highest
+                  <span class="ocr-highlight" title="Error: Should be 'priority'">prioriy</span>. Failure is not an
+                  option.
+                </p>
+              </div>
+              <div class="mt-6 text-center">
+                <button
+                  class="flex w-full sm:w-auto items-center justify-center gap-2 rounded-md h-12 px-8 bg-[var(--primary-color)] text-white text-base font-bold leading-normal tracking-wide hover:bg-[#0b8bcc] transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#111618] focus:ring-[var(--primary-color)]">
+                  <span class="material-symbols-outlined">task_alt</span>
+                  <span class="truncate">Submit Final Version</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+</body>
+
+</html>

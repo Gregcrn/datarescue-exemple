@@ -1,90 +1,118 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
-<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-<title>Stitch Design</title>
-<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<style type="text/tailwindcss">
-      :root {
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+  <link as="style"
+    href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700"
+    onload="this.rel='stylesheet'" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <title>Stitch Design</title>
+  <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <style type="text/tailwindcss">
+    :root {
         --primary-color: #0da6f2;
       }
     </style>
 </head>
-<body class="bg-[#0A0E10]">
-<div class="relative flex h-auto min-h-screen w-full flex-col bg-[#0A0E10] dark group/design-root overflow-x-hidden" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
-<div class="layout-container flex h-full grow flex-col">
-<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#283339] px-10 py-3">
-<div class="flex items-center gap-3 text-white">
-<svg class="size-7 text-[var(--primary-color)]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M23.9999 4.41187L4.41175 24L23.9999 43.5881L43.5881 24L23.9999 4.41187Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
-<path d="M24 4V44" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
-<path d="M4 24H44" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
-</svg>
-<h1 class="text-white text-xl font-bold tracking-[-0.015em]">OPERATION: DATA RESCUE</h1>
-</div>
-<div class="flex items-center gap-4">
-<button class="flex cursor-pointer items-center justify-center rounded-full h-10 w-10 bg-transparent text-white/70 hover:bg-white/10 hover:text-white transition-colors">
-<span class="material-symbols-outlined"> settings </span>
-</button>
-<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-white/50" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA3UCnracTkwOYVhfoub_9kfggvdmTY0RNWoTgAY6Jr_zRpIq5f6QwhlPgROvndB2MLUTL6TumssSgvLDVTNB76hbHb2RW77os-57QcuE96Wu3vvQYChWw8zTIy5IdqmkxVMljsCi18DGhwTgx-xMa1N1_Gsvsb7PWsr6VNBL_F0PIxtPMc0HP4lUZlIMpaMTyoPImPo6OtlNxfszdroqBdhMjY5j_BkxiSRsrYU-M93IUNzutrkEojRuWMF7p1SWaA5OZqD8rf8w");'></div>
-</div>
-</header>
-<main class="flex-1 px-10 py-8">
-<div class="grid grid-cols-12 gap-8 max-w-7xl mx-auto">
-<div class="col-span-7">
-<div class="border border-[#283339] rounded-lg bg-[#111618]/50 p-6 shadow-2xl shadow-black/20">
-<div class="flex items-center gap-4 mb-6">
-<div class="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></div>
-<h2 class="text-2xl font-bold text-white tracking-wider uppercase">Mission Briefing</h2>
-</div>
-<div class="relative pl-8 border-l-2 border-[var(--primary-color)]/20 space-y-4">
-<div class="absolute -left-[1.35rem] top-0.5 flex items-center justify-center size-10 bg-[#0A0E10] rounded-full border-2 border-[var(--primary-color)]/50">
-<span class="material-symbols-outlined text-[var(--primary-color)] text-2xl"> campaign </span>
-</div>
-<p class="text-gray-300 font-mono text-base leading-relaxed">
-                    Agent, your mission is critical. A rogue AI, known as
-                    <span class="text-[var(--primary-color)] font-semibold">'Nexus'</span>, has infiltrated the global data network, threatening to expose sensitive information. Your
-                    objective is to navigate the digital labyrinth, neutralize Nexus, and secure the data. Remember, every decision counts. Good luck.
-                  </p>
-</div>
-</div>
-<div class="mt-8 border border-[#283339] rounded-lg bg-[#111618]/50 p-6 shadow-2xl shadow-black/20">
-<h3 class="text-xl font-bold text-white tracking-wider uppercase mb-6 flex items-center gap-3">
-<span class="material-symbols-outlined text-[var(--primary-color)]"> task_alt </span>
-                  Objectives
-                </h3>
-<div class="space-y-4">
-<label class="flex items-center gap-x-4 p-4 rounded-lg bg-black/20 border border-transparent hover:border-[var(--primary-color)]/30 transition-all cursor-pointer">
-<input class="h-6 w-6 rounded border-2 border-[#3b4c54] bg-transparent text-[var(--primary-color)] checked:bg-[var(--primary-color)] focus:ring-0 focus:ring-offset-0 transition-all duration-300" type="checkbox"/>
-<span class="text-gray-200 text-lg font-medium">Infiltrate the Network Core</span>
-</label>
-<label class="flex items-center gap-x-4 p-4 rounded-lg bg-black/20 border border-transparent hover:border-[var(--primary-color)]/30 transition-all cursor-pointer">
-<input class="h-6 w-6 rounded border-2 border-[#3b4c54] bg-transparent text-[var(--primary-color)] checked:bg-[var(--primary-color)] focus:ring-0 focus:ring-offset-0 transition-all duration-300" type="checkbox"/>
-<span class="text-gray-200 text-lg font-medium">Neutralize Nexus AI</span>
-</label>
-<label class="flex items-center gap-x-4 p-4 rounded-lg bg-black/20 border border-transparent hover:border-[var(--primary-color)]/30 transition-all cursor-pointer">
-<input class="h-6 w-6 rounded border-2 border-[#3b4c54] bg-transparent text-[var(--primary-color)] checked:bg-[var(--primary-color)] focus:ring-0 focus:ring-offset-0 transition-all duration-300" type="checkbox"/>
-<span class="text-gray-200 text-lg font-medium">Secure Data Integrity</span>
-</label>
-</div>
-</div>
-</div>
-<div class="col-span-5">
-<div class="w-full aspect-[4/3] rounded-lg bg-center bg-cover border-2 border-[#283339] shadow-2xl shadow-black/20 relative overflow-hidden" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuASuqi63jZqjqTPDwWec5tmgk1Frhby3Jmqhy09S1LMrP59joQYa3V9uamlpigmKV1ewgFbmxoeUL59DlrB4tBDctL3lnjFSJFbWPHTNdDQQAn2UI8JkvBP_yuGoMCBHqrV8EAq4YzwE7ZEIFD-SbAzPqv8C4jRtNrpHWnZ0wyW1RMyVb-FplZrOi-PaJtMzYwEAyzrNis5BwGXCQweSfVBGjc7NxKHFpdFdfgNRTyz_D8_2qJgfT4Exrmr8ZW9Iur7jy8qv76kEA");'>
-<div class="absolute inset-0 bg-black/20"></div>
-<div class="absolute inset-0 border-4 border-[var(--primary-color)]/30 rounded-lg animate-pulse"></div>
-<div class="absolute bottom-4 left-4 right-4 bg-black/50 p-3 rounded-md backdrop-blur-sm border border-white/10">
-<h4 class="text-sm font-semibold text-[var(--primary-color)]">CONTEXT:</h4>
-<p class="text-white/80 text-xs font-mono">Global Data Network Hub</p>
-</div>
-</div>
-</div>
-</div>
-</main>
-</div>
-</div>
 
-</body></html>
+<body class="bg-[#0A0E10]">
+  <div class="relative flex h-auto min-h-screen w-full flex-col bg-[#0A0E10] dark group/design-root overflow-x-hidden"
+    style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+    <div class="layout-container flex h-full grow flex-col">
+      <header
+        class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#283339] px-10 py-4">
+        <div class="flex items-center gap-4 text-white">
+          <svg class="size-8 text-[var(--primary-color)]" fill="none" viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg">
+            <path clip-rule="evenodd"
+              d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z"
+              fill="currentColor" fill-rule="evenodd"></path>
+          </svg>
+          <h1 class="text-white text-xl font-bold leading-tight tracking-[-0.015em] uppercase">Operation: Data Rescue
+          </h1>
+        </div>
+        <div class="flex flex-1 justify-end gap-6 items-center">
+          <button class="text-gray-400 hover:text-white transition-colors">
+            <span class="material-symbols-outlined"> settings </span>
+          </button>
+          <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-[#283339]"
+            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuArj5BaLo34bSEir9h4yj_EOiU9VvilJsn8DgwzMUJI7PWcOyTZDXXMYhrM2rkPEgAi_UpjPbQhpaal7wtCCL1_DhXJKY-o5iR8PI2eXyfjSPyUBSXBlq6V8s9yFlEhp4SH-sIzI3968ZHILkRkYhxvkBKO9Of2pq_QbAf4dcJdp-JTMoj1H1g2gYeVPR4Ei2Zk3vNPrv-SL2w8SPQ-vxtRFm0wjXSO2bHHk-FoH5czGDYRz68W-ELMRtZcKf7NnqbbOMG7Rwrk5Q");'>
+          </div>
+        </div>
+      </header>
+      <main class="flex-1 px-10 py-8">
+        <div class="grid grid-cols-12 gap-8 max-w-7xl mx-auto">
+          <div class="col-span-7">
+            <div class="border border-[#283339] rounded-lg bg-[#111618]/50 p-6 shadow-2xl shadow-black/20">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></div>
+                <h2 class="text-2xl font-bold text-white tracking-wider uppercase">Mission Briefing</h2>
+              </div>
+              <div class="relative pl-8 border-l-2 border-[var(--primary-color)]/20 space-y-4">
+                <div
+                  class="absolute -left-[1.35rem] top-0.5 flex items-center justify-center size-10 bg-[#0A0E10] rounded-full border-2 border-[var(--primary-color)]/50">
+                  <span class="material-symbols-outlined text-[var(--primary-color)] text-2xl"> campaign </span>
+                </div>
+                <p class="text-gray-300 font-mono text-base leading-relaxed">
+                  Agent, your mission is critical. A rogue AI, known as
+                  <span class="text-[var(--primary-color)] font-semibold">'Nexus'</span>, has infiltrated the global
+                  data network, threatening to expose sensitive information. Your
+                  objective is to navigate the digital labyrinth, neutralize Nexus, and secure the data. Remember, every
+                  decision counts. Good luck.
+                </p>
+              </div>
+            </div>
+            <div class="mt-8 border border-[#283339] rounded-lg bg-[#111618]/50 p-6 shadow-2xl shadow-black/20">
+              <h3 class="text-xl font-bold text-white tracking-wider uppercase mb-6 flex items-center gap-3">
+                <span class="material-symbols-outlined text-[var(--primary-color)]"> task_alt </span>
+                Objectives
+              </h3>
+              <div class="space-y-4">
+                <label
+                  class="flex items-center gap-x-4 p-4 rounded-lg bg-black/20 border border-transparent hover:border-[var(--primary-color)]/30 transition-all cursor-pointer">
+                  <input
+                    class="h-6 w-6 rounded border-2 border-[#3b4c54] bg-transparent text-[var(--primary-color)] checked:bg-[var(--primary-color)] focus:ring-0 focus:ring-offset-0 transition-all duration-300"
+                    type="checkbox" />
+                  <span class="text-gray-200 text-lg font-medium">Infiltrate the Network Core</span>
+                </label>
+                <label
+                  class="flex items-center gap-x-4 p-4 rounded-lg bg-black/20 border border-transparent hover:border-[var(--primary-color)]/30 transition-all cursor-pointer">
+                  <input
+                    class="h-6 w-6 rounded border-2 border-[#3b4c54] bg-transparent text-[var(--primary-color)] checked:bg-[var(--primary-color)] focus:ring-0 focus:ring-offset-0 transition-all duration-300"
+                    type="checkbox" />
+                  <span class="text-gray-200 text-lg font-medium">Neutralize Nexus AI</span>
+                </label>
+                <label
+                  class="flex items-center gap-x-4 p-4 rounded-lg bg-black/20 border border-transparent hover:border-[var(--primary-color)]/30 transition-all cursor-pointer">
+                  <input
+                    class="h-6 w-6 rounded border-2 border-[#3b4c54] bg-transparent text-[var(--primary-color)] checked:bg-[var(--primary-color)] focus:ring-0 focus:ring-offset-0 transition-all duration-300"
+                    type="checkbox" />
+                  <span class="text-gray-200 text-lg font-medium">Secure Data Integrity</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-5">
+            <div
+              class="w-full aspect-[4/3] rounded-lg bg-center bg-cover border-2 border-[#283339] shadow-2xl shadow-black/20 relative overflow-hidden"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuASuqi63jZqjqTPDwWec5tmgk1Frhby3Jmqhy09S1LMrP59joQYa3V9uamlpigmKV1ewgFbmxoeUL59DlrB4tBDctL3lnjFSJFbWPHTNdDQQAn2UI8JkvBP_yuGoMCBHqrV8EAq4YzwE7ZEIFD-SbAzPqv8C4jRtNrpHWnZ0wyW1RMyVb-FplZrOi-PaJtMzYwEAyzrNis5BwGXCQweSfVBGjc7NxKHFpdFdfgNRTyz_D8_2qJgfT4Exrmr8ZW9Iur7jy8qv76kEA");'>
+              <div class="absolute inset-0 bg-black/20"></div>
+              <div class="absolute inset-0 border-4 border-[var(--primary-color)]/30 rounded-lg animate-pulse"></div>
+              <div
+                class="absolute bottom-4 left-4 right-4 bg-black/50 p-3 rounded-md backdrop-blur-sm border border-white/10">
+                <h4 class="text-sm font-semibold text-[var(--primary-color)]">CONTEXT:</h4>
+                <p class="text-white/80 text-xs font-mono">Global Data Network Hub</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+</body>
+
+</html>
